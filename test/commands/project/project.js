@@ -287,7 +287,7 @@ describe('project', function() {
         project.verify(projPath, {}, function(err, reply) {
           should.not.exist(err);
 
-          capture.output().should.startWith('\nProject Errors\n--------------\n#/swagger:');
+          capture.output().should.startWith('\nProject Errors\n\nProject Errors\n--------------\n--------------\n#/swagger:');
           reply.should.startWith('Results:');
           done();
         })
